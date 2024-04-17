@@ -47,16 +47,28 @@ header {
 span {
   color: var(--main-color);
 }
-.navlist {
-  display: flex;
+.navlist{
+  position: absolute;
+  top: 100%;
+  right: -100%;
+  width: 255px;
+  min-height: 100vh;
+  display:flex;
+  flex-direction: column;
+  background: var(--main-color);
+  transition: all .50s ease;
 }
-.navlist a {
-  font-size: var(--p-font);
-  font-weight: 500;
-  color: var(--other-color);
-  margin-left: 40px;
-  transition: all 0.5 ease;
+
+.navlist a{
+  display: block;
+  padding: 17px;
+  font-size: 22px;
 }
+.navlist.active{
+  right: 0;
+}
+
+
 .navlist a:hover {
   color: var(--main-color);
   text-shadow: 3px 3px 3px var(--main-color), -2px 1px 30px var(--text-color);
@@ -92,18 +104,14 @@ section {
 }
 
 .hero {
-  height: 100vh;
-  width: 100%;
-  background-image: url(../img/w.png);
-  background-repeat: no-repeat;
-  background-position: left center;
-  display: flex;
-  align-items: center;
-  padding-right: 20%; /* Menambahkan ruang kosong di sebelah kanan */
-  background-size: auto 80%; /* Mengatur ukuran gambar agar lebih besar */
+  height: 90vh; /* Adjusted height for smaller screens */
+  background-size: cover; /* Cover the background image */
+  padding-right: 0; /* Remove padding on the right */
 }
 
-
+.main-content {
+  margin-top: 100px; /* Sesuaikan dengan jarak yang diinginkan */
+}
 
 
 .main-content h4 {
@@ -115,6 +123,7 @@ section {
   font-weight: 900;
   margin: 20px 0px 20px;
   line-height: 1.2;
+  margin-top: 10px;
 }
 
 .main-content p {
@@ -125,6 +134,7 @@ section {
   color: var(--other-color);
   line-height: 30px;
   margin-bottom: 15px;
+  margin-top: 10px;
 }
 
 .social {
@@ -190,11 +200,9 @@ header.sticky {
 }
 
 .about {
-  background: var(--second-bg-color);
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
-  gap: 1rem;
+  grid-template-columns: 1fr; /* Display about section in a single column */
+  gap: 2rem;
+  text-align: center;
 }
 
 .about-img img {
@@ -533,22 +541,21 @@ form .send-btn:hover {
   #menu-icon{
     display: block;
   }
-  .navlist{
-    position: absolute;
-    top: 100%;
-    right: -100%;
-    width: 255px;
-    min-height: 100vh;
-    display:flex;
-    flex-direction: column;
-    background: var(--bg-color);
-    transition: all .50s ease;
+  .navlist {
+    display: flex;
   }
-  .navlist a{
-    display: block;
-    padding: 17px;
-    font-size: 22px;
+  .navlist a {
+    font-size: var(--p-font);
+    font-weight: 500;
+    color: var(--other-color);
+    margin-left: 40px;
+    transition: all 0.5 ease;
   }
+  .navlist a:hover {
+    color: var(--main-color);
+    text-shadow: 3px 3px 3px var(--main-color), -2px 1px 30px var(--text-color);
+  }
+  
   .navlist.active{
     right: 0;
   }
