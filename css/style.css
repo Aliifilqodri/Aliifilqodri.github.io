@@ -562,6 +562,19 @@ form .send-btn:hover {
     color: var(--main-color);
     text-shadow: 3px 3px 3px var(--main-color), -2px 1px 30px var(--text-color);
   }
+
+  .contact-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4.2rem;
+  }
+  
+  .contact-form form {
+    position: relative;
+    width: 600px;
+  }
+  
   
   .navlist.active{
     right: 0;
