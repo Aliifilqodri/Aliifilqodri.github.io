@@ -12,8 +12,8 @@
   --text-color: #fff;
   --bg-color: #1b1f24;
   --second-bg-color: #22282f;
-  --main-color: #13bbff;
-  --other-color: #c3cad5;
+  --main-color: #FF0000;
+  --other-color: #ffffff;
 
   --h1-font: 4.5rem;
   --h2-font: 2.9rem;
@@ -456,7 +456,7 @@ form .send-btn:hover {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: #075fe4;
+  background: #FF0000;
   width: 45px;
   height: 45px;
   border-radius: 50%;
