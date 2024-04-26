@@ -350,9 +350,9 @@ header.sticky {
 }
 
 .row h5 {
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 600;
-  color: var(--other-color);
+  color: #FF0000;
 }
 
 .row i {
