@@ -538,6 +538,39 @@ form .send-btn:hover {
   }
 }
 
+.certificates-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.certificate-item {
+  background: var(--second-bg-color);
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.certificate-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.certificate-item p {
+  padding: 15px;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+.certificate-item:hover {
+  transform: scale(1.05);
+}
+
+
 @media (max-width: 950px){
   :root{
     --h1-font: 3.5rem;
