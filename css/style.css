@@ -592,7 +592,7 @@ form .send-btn:hover {
     transition: all 0.5 ease;
   }
   .navlist a:hover {
-    color: var(--main-color);
+    color: black;
     text-shadow: 3px 3px 3px var(--main-color), -2px 1px 30px var(--text-color);
   }
 
@@ -635,3 +635,4 @@ form .send-btn:hover {
     margin: 0 auto;
   }
 }
+
