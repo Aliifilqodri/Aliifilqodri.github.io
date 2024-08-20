@@ -114,13 +114,12 @@
 
           <p class="exp">
             Specialty:
-            <span>UI UX Designer, Graphic Designer</span>
+            <span>UI/UX Designer, Graphic Designer</span>
           </p>
 
           <p class="exp">
             School:
-            <span>Telkom School The Real
-              Informatics School</span>
+            <span>Telkom School</span>
           </p>
 
           <p class="exp">
@@ -660,25 +659,17 @@
 
 
     <!--contact-->
-    <section class="contact" id="contact">
-      <div class="center-text" data-aos="fade-in">
-        <h2>Contact<span>Me</span></h2>
-        <h3>Belum Terconnect dengan PHP</h3>
+    <<section class="contact" id="contact">
+      <div class="center-text" data-aos="fade-down">
+        <h2>Contact <span>Me</span></h2>
       </div>
-
-      <div class="contact-form">
-        <form action="">
-          <input type="text" placeholder="Your name" required />
-          <input type="email" placeholder="Email Address.." required />
-          <textarea
-            name=""
-            id=""
-            cols="30"
-            rows="10"
-            placeholder="Write Message Here.."
-            required
-          ></textarea>
-          <input type="submit" name="" value="Send Message" class="send-btn" />
+    
+      <div class="contact-form" data-aos="zoom-in-down">
+        <form action="contact.php" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea name="message" placeholder="Your Message" required></textarea>
+          <button type="submit" class="btn">Send Message</button>
         </form>
       </div>
     </section>
