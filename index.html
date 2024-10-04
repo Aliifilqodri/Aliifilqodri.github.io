@@ -3,803 +3,722 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aliif's Portofolio</title>
+    <title>Aliif Portofolio</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+    <!-- box ixon link-->
     <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@^2.2/dist/tailwind.min.css"
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
+
+    <!-- remix ixon link-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="assets/skills/a.png" type="image/x-icon" />
+
+    <!-- google font link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
-  <body class="bg-gray-900 text-gray-200 font-sans">
-    <!-- Navbar -->
-    <nav class="bg-red-900 py-4 shadow-lg fixed w-full top-0 left-0 z-50">
-      <div class="container mx-auto flex justify-between items-center">
-        <!-- Logo / Brand -->
-        <a
-          href="#"
-          class="text-lg sm:text-2xl md:text-3xl font-extrabold text-yellow-400 hover:text-yellow-300 transition duration-300 transform hover:scale-105"
-          >Aliif's Portofolio</a
-        >
+  <body>
 
-        <!-- Hamburger Button for mobile -->
-        <div class="lg:hidden">
-          <button id="nav-toggle" class="text-yellow-400 focus:outline-none">
-            <svg
-              class="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              ></path>
-            </svg>
-          </button>
-        </div>
+    <!--Header-->
+    <header>
+      <a href="#" class="logo"><span></span></a>
 
-        <!-- Navigation Links for Desktop -->
-        <div id="nav-menu" class="hidden lg:flex space-x-6">
-          <a
-            href="#profile"
-            class="relative group text-white font-semibold transition duration-300"
-            >Profile
-            <span
-              class="absolute bottom-0 left-0 w-0 h-1 bg-yellow-400 transition-all duration-500 group-hover:w-full"
-            ></span
-          ></a>
-          <a
-            href="#gallery"
-            class="relative group text-white font-semibold transition duration-300"
-            >Gallery
-            <span
-              class="absolute bottom-0 left-0 w-0 h-1 bg-yellow-400 transition-all duration-500 group-hover:w-full"
-            ></span
-          ></a>
-          <a
-            href="#Organization"
-            class="relative group text-white font-semibold transition duration-300"
-            >Organization
-            <span
-              class="absolute bottom-0 left-0 w-0 h-1 bg-yellow-400 transition-all duration-500 group-hover:w-full"
-            ></span
-          ></a>
-          <a
-            href="#Certificate"
-            class="relative group text-white font-semibold transition duration-300"
-            >Certificate
-            <span
-              class="absolute bottom-0 left-0 w-0 h-1 bg-yellow-400 transition-all duration-500 group-hover:w-full"
-            ></span
-          ></a>
-        </div>
-      </div>
+      <div class="bx bx-menu" id="menu-icon"></div>
 
-      <!-- Mobile Menu -->
-      <div id="nav-mobile-menu" class="lg:hidden hidden bg-red-900 py-4">
-        <a
-          href="#profile"
-          class="block py-2 text-center text-white hover:text-gray-300"
-          >Profile</a
-        >
-        <a
-          href="#gallery"
-          class="block py-2 text-center text-white hover:text-gray-300"
-          >Gallery</a
-        >
-        <a
-          href="#Organization"
-          class="block py-2 text-center text-white hover:text-gray-300"
-          >Organization</a
-        >
-        <a
-          href="#Certificate"
-          class="block py-2 text-center text-white hover:text-gray-300"
-          >Certificate</a
-        >
-      </div>
-    </nav>
+      <ul class="navlist">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">My Gallery</a></li>
+        <li><a href="#certificates">My Certificate</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
 
-    <script>
-      // JavaScript to toggle the mobile menu
-      const navToggle = document.getElementById("nav-toggle");
-      const navMenu = document.getElementById("nav-mobile-menu");
-
-      navToggle.addEventListener("click", () => {
-        navMenu.classList.toggle("hidden");
-      });
-    </script>
-
-    <style>
-      /* Hover underline effect */
-      .group:hover span {
-        width: 100%;
-      }
-    </style>
-
-    <!-- Hero Section -->
-    <header class="relative overflow-hidden bg-black">
-      <video
-        autoplay
-        muted
-        loop
-        class="absolute inset-0 w-full h-full object-cover opacity-30"
-      >
-        <source src="assets/vd/ult.mp4" type="video/mp4" />
-      </video>
-      <div class="absolute inset-0 bg-black opacity-60"></div>
-      <div
-        class="relative z-10 flex flex-col items-center justify-center h-screen text-center p-4"
-      >
-        <h1 id="typing-text" class="text-6xl font-bold text-white mb-4"></h1>
-        <p class="text-xl mb-8 text-gray-300">
-          Welcome To My Portofolio
-        </p>
-        <a
-          class="bg-yellow-400 py-3 px-6 rounded-full hover:bg-yellow-500 text-lg font-semibold transition duration-300 shadow-lg"
-          >Hire Me</a
-        >
+      <div class="top-btnn">
+        <a href="#contact" class="h-btn">Contact Us</a>
       </div>
     </header>
 
-    <!-- Profile Section -->
-    <section id="profile" class="py-16 px-4 bg-gray-800">
-      <div class="container mx-auto text-center">
-        <h2 class="text-5xl font-bold mb-8 text-yellow-400">Profile</h2>
-
-        <!-- Profile Photo -->
-        <div class="w-full flex flex-col items-center justify-center">
-          <img
-            src="assets/img/profile.jpg"
-            alt="Profile Photo"
-            class="w-56 h-56 rounded-full border-4 border-yellow-400 shadow-xl transform hover:scale-105 transition-transform duration-300"
-          />
+    <!--Hero-->
+    <section class="hero" id="home" data-aos="zoom-in-down">
+      <div class="main-content" data-aos="fade-in">
+        <h4>Hi EveryOne!!</h4>
+        <h1>I'm<span> Moh. Aliiffil Qodri Vanoza Araby</span></h1>
+        <p>
+          Website ini adalah Portofolio saya, saya fokus pada Cloud Computing (OPS), eksplorasi
+          coding, bisa dilihat disini, dan saya ingin mengalahkan diri sendiri. 🌟
+        </p>
+        <div class="social">
+          <a href="https://www.instagram.com/aaliipppp._/"
+            ><i class="ri-instagram-fill"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/moh-aliifil-qodri-vanoza-araby-948773316?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            ><i class="ri-linkedin-fill"></i
+          ></a>
+          <a href="https://github.com/Aliifilqodri"
+            ><i class="ri-github-fill"></i
+          ></a>
+          <a href="https://www.wattpad.com/user/aleevvideo"
+            ><i class="ri-book-line"></i
+          ></a>
+          <a href="https://www.tiktok.com/@liiiippppp._?lang=en"
+            ><i class="ri-tiktok-fill"></i
+          ></a>
+          <a
+            href="https://open.spotify.com/playlist/1MrwgjW4axnarbwxUAFD8y?si=ccb0395c82d044cf"
+            ><i class="ri-spotify-fill"></i
+          ></a>
         </div>
 
-        <div class="flex flex-col items-center justify-center mt-8">
-          <!-- Profile Description -->
-          <div class="w-full lg:w-2/3 mb-8">
-            <p class="text-lg mb-4">
-              <span class="font-bold text-yellow-400">Hello,</span> I'm Aliif, a
-              tech enthusiast and skilled developer. Specializing in HTML, CSS,
-              JavaScript, and PHP, I'm here to bring your ideas to life with a
-              touch of innovation.
-            </p>
-
-            <!-- Action Button -->
-            <a
-              href="https://www.youtube.com/watch?v=kBMOYBORmZE&t=67s&pp=ygULcGlkYXRvIGx1Y3U%3D"
-              class="bg-yellow-400 py-3 px-6 rounded-full hover:bg-yellow-500 text-lg font-semibold inline-block transition duration-300 shadow-lg"
-            >
-              Watch My Video
-            </a>
-          </div>
-
-          <!-- Social Media Links -->
-          <div class="flex justify-center space-x-6 mt-8">
-            <a
-              href="https://www.instagram.com/projectproalip/"
-              target="_blank"
-              class="text-white hover:text-yellow-400 transition duration-300 transform hover:scale-110"
-            >
-              <img src="assets/Logo/ig.png" alt="Instagram" class="w-8 h-8" />
-            </a>
-            <a
-              href="https://discord.gg/6f834Pa8wN"
-              target="_blank"
-              class="text-white hover:text-yellow-400 transition duration-300 transform hover:scale-110"
-            >
-              <img src="assets/Logo/DC.png" alt="Discord" class="w-8 h-8" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/moh-aliifil-qodri-vanoza-araby-b4b3a2330/"
-              target="_blank"
-              class="text-white hover:text-yellow-400 transition duration-300 transform hover:scale-110"
-            >
-              <img
-                src="assets/Logo/linkedin.png"
-                alt="LinkedIn"
-                class="w-8 h-8"
-              />
-            </a>
-            <a
-              href="https://www.tiktok.com/@liiiippppp._?lang=en"
-              target="_blank"
-              class="text-white hover:text-yellow-400 transition duration-300 transform hover:scale-110"
-            >
-              <img src="assets/Logo/tt.png" alt="TikTok" class="w-8 h-8" />
-            </a>
-            <a
-              href="https://www.wattpad.com/user/aleevvideo"
-              target="_blank"
-              class="text-white hover:text-yellow-400 transition duration-300 transform hover:scale-110"
-            >
-              <img
-                src="assets/Logo/Wattpad.png"
-                alt="Wattpad"
-                class="w-8 h-8"
-              />
-            </a>
-          </div>
+        <div class="main-button">
+          <a
+            href="https://drive.google.com/drive/folders/1hc_F65RMhyKGasb5TU3ZZWzwTVS0pMPJ?usp=sharing"
+            class="btn"
+            >All My Certificates</a
+          >
+          <a
+            href="https://www.youtube.com/watch?v=kBMOYBORmZE&pp=ygUScGlkYXRvIGlzbGFtaSBsdWN1"
+            class="btn btn2"
+            >My Pidato Video</a
+          >
         </div>
       </div>
     </section>
 
-    <!-- CV Section -->
-    <section id="cv" class="py-16 px-4 bg-gray-700">
-      <div class="container mx-auto text-center">
-        <h2 class="text-5xl font-bold mb-8 text-yellow-400">My CV</h2>
-        <div
-          class="max-w-4xl mx-auto bg-gray-900 p-4 rounded-lg shadow-lg overflow-hidden"
+    <!--About-->
+    <section class="about" id="about">
+      <div class="about-img">
+        <img src="img/sr/123.png" alt="About Image" data-aos="zoom-in-down" />
+      </div>
+      <div class="about-text" data-aos="zoom-in-up">
+        <h2>
+          I am a <span>Designer</span> <br />
+          & Novelist
+        </h2>
+        <div class="exp-area">
+          <p class="exp">
+            Experience:
+            <span>Is trying my best</span>
+          </p>
+
+          <p class="exp">
+            Specialty:
+            <span>UI/UX Designer, Graphic Designer</span>
+          </p>
+
+          <p class="exp">
+            School:
+            <span>Telkom School</span>
+          </p>
+
+          <p class="exp">
+            Email:
+            <span>aleevtugung@gmail.com</span>
+          </p>
+        </div>
+        <a
+          href="https://drive.google.com/file/d/1g_H0NOurPTo_aBlR5a7jQcKz8TG-94wb/view?usp=sharing"
+          class="btn" type="blank"
+          >My Cv</a
         >
-          <iframe
-            src="assets/docs/cv.pdf"
-            style="width: 100%; height: 800px;"
-            frameborder="0"
-          ></iframe>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="center-text" data-aos="fade-down">
+        <h2>My <span>Services</span></h2>
+      </div>
+
+      <div class="services-content" data-aos="zoom-in-up">
+        <div class="box">
+          <img src="img/logo/112.png" alt="Service 1" />
+          <h3>Suka Ngoding</h3>
+          <p>
+            Ngoding memang bukan Jurusan saya, tapi bagi saya seru
+          </p>
+          <a
+            href="https://www.youtube.com/watch?v=d7prHrbP2do&pp=ygUUa2VuYXBhIHN1a2EgbmdvZGluZz8%3D"
+          >
+            Motivasi Ngoding
+            <i class="ri-arrow-right-line"></i>
+          </a>
+        </div>
+
+        <div class="box">
+          <img src="img/logo/111.png" alt="Service 2" />
+          <h3>Bikin Web Ultraman</h3>
+          <p>Ayok nonton Ultraman</p>
+          <a href="https://aliifilqodri.github.io/Website-Movies-ultraman/">
+            Klik ini!
+            <i class="ri-arrow-right-line"></i>
+          </a>
+        </div>
+
+        <div class="box">
+          <img src="img/logo/90.png" alt="Service 2" />
+          <h3>Suka Figma</h3>
+          <p>Ayok nonton Ultraman</p>
+          <a href="#">
+            Klik ini!
+            <i class="ri-arrow-right-line"></i>
+          </a>
+        </div>
+
+        <div class="box">
+          <img src="img/logo/120.png" alt="Service 3" />
+          <h3>Suka menulis cerita</h3>
+          <p>Saya juga memiliki keahlian nulis sebuah cerita Fiksi</p>
+          <a
+            href="https://www.wattpad.com/myworks/365116884-new-generation-of-light"
+          >
+            Cerita buatan saya
+            <i class="ri-arrow-right-line"></i>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="py-16 px-4 bg-gray-800">
-      <div class="container mx-auto text-center">
-        <h2 class="text-5xl font-bold mb-8 text-yellow-400">Skills</h2>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-          <div
-            class="bg-gray-700 p-6 rounded-lg shadow-lg transform hover:scale-110 transition-transform duration-300"
-          >
-            <img
-              src="assets/skills/Html.png"
-              alt="HTML"
-              class="w-24 h-24 mx-auto mb-4"
-            />
-            <p class="text-lg">HTML</p>
+    <!--portofolio-->
+    <section class="gallery" id="gallery">
+      <div class="center-text" data-aos="fade-down">
+        <h2>My<span>Gallery</span></h2>
+      </div>
+
+      <div class="portofolio-content" data-aos="zoom-in-down">
+
+        <div class="row">
+          <img src="img/img.jpeg" />
+          <div class="main-row">
+            <div class="row-text">
+              <h5>Create an Ultraman film website from React.JS</h5>
+            </div>
+            <div class="row-icon">
+              <a href="https://github.com/Aliifilqodri/Pembuatan-Web-film">
+                <i class="ri-github-fill"></i>
+              </a>
+            </div>
           </div>
-          <div
-            class="bg-gray-700 p-6 rounded-lg shadow-lg transform hover:scale-110 transition-transform duration-300"
-          >
-            <img
-              src="assets/skills/css.png"
-              alt="CSS"
-              class="w-24 h-24 mx-auto mb-4"
-            />
-            <p class="text-lg">CSS</p>
-          </div>
-          <div
-            class="bg-gray-700 p-6 rounded-lg shadow-lg transform hover:scale-110 transition-transform duration-300"
-          >
-            <img
-              src="assets/skills/js.jpg"
-              alt="JavaScript"
-              class="w-24 h-24 mx-auto mb-4"
-            />
-            <p class="text-lg">JavaScript</p>
-          </div>
-          <div
-            class="bg-gray-700 p-6 rounded-lg shadow-lg transform hover:scale-110 transition-transform duration-300"
-          >
-            <img
-              src="assets/skills/php.png"
-              alt="PHP"
-              class="w-24 h-24 mx-auto mb-4"
-            />
-            <p class="text-lg">PHP</p>
-          </div>
-          <div
-            class="bg-gray-700 p-6 rounded-lg shadow-lg transform hover:scale-110 transition-transform duration-300"
-          >
-            <img
-              src="assets/skills/python.png"
-              alt="Python"
-              class="w-24 h-24 mx-auto mb-4"
-            />
-            <p class="text-lg">Python</p>
-          </div>
-          <div
-            class="bg-gray-700 p-6 rounded-lg shadow-lg transform hover:scale-110 transition-transform duration-300"
-          >
-            <img
-              src="assets/skills/Figma.png"
-              alt="Python"
-              class="w-24 h-24 mx-auto mb-4"
-            />
-            <p class="text-lg">Figma</p>
-          </div>
-          <div
-            class="bg-gray-700 p-6 rounded-lg shadow-lg transform hover:scale-110 transition-transform duration-300"
-          >
-            <img
-              src="assets/skills/Vscode.png"
-              alt="Python"
-              class="w-24 h-24 mx-auto mb-4"
-            />
-            <p class="text-lg">VScode</p>
-          </div>
-          <div
-            class="bg-gray-700 p-6 rounded-lg shadow-lg transform hover:scale-110 transition-transform duration-300"
-          >
-            <img
-              src="assets/skills/cc.png"
-              alt="Python"
-              class="w-24 h-24 mx-auto mb-4"
-            />
-            <p class="text-lg">Capcut</p>
-          </div>
-          <div
-            class="bg-gray-700 p-6 rounded-lg shadow-lg transform hover:scale-110 transition-transform duration-300"
-          >
-            <img
-              src="assets/skills/AI'.png"
-              alt="Python"
-              class="w-24 h-24 mx-auto mb-4"
-            />
-            <p class="text-lg">Adobe Ilustrator</p>
-          </div>
+          <h4>
+            Create a film website containing the Ultraman film using Java and
+            activate it if possible, hehe
+          </h4>
         </div>
+
+        <div class="row">
+          <img src="img/ww.png" />
+          <div class="main-row">
+            <div class="row-text">
+              <h5>Create a website using PHP</h5>
+            </div>
+            <div class="row-icon">
+              <a href="https://github.com/Aliifilqodri/Hack">
+                <i class="ri-github-fill"></i>
+              </a>
+            </div>
+          </div>
+          <h4>
+            Create an Ultraman Website made from XAMPP and based on PHP
+          </h4>
+        </div>
+        
+        <div class="row">
+          <img src="img/021.png" />
+          <div class="main-row">
+            <div class="row-text">
+              <h5>Library Application Design Competition</h5>
+            </div>
+            <div class="row-icon">
+              </a>
+            </div>
+          </div>
+          <h4>
+            Creating a Library Application in a Competition Held by the University
+          </h4>
+        </div>
+
+        <div class="row">
+          <img src="img/py.png" />
+          <div class="main-row">
+            <div class="row-text">
+              <h5>The first exercise uses Python</h5>
+            </div>
+            <div class="row-icon">
+            </div>
+          </div>
+          <h4>
+            Using Python for assignments for the first time in class
+          </h4>
+        </div>
+
+        <div class="row">
+          <img src="img/dgp.png" />
+          <div class="main-row">
+            <div class="row-text">
+              <h5>Digiup Training Online on Zoom</h5>
+            </div>
+            <div class="row-icon">
+            </div>
+          </div>
+          <h4>
+            Online Digiup Graphic Design training on Zoom conducted at school
+          </h4>
+        </div>
+        
+        <div class="row">
+          <img src="img/scs.png" />
+          <div class="main-row">
+            <div class="row-text">
+              <h5>Create a Cisco Cable Map</h5>
+            </div>
+            <div class="row-icon">
+            </div>
+          </div>
+          <h4>
+            Make a school map and connect one cable to another between rooms
+          </h4>
+        </div>
+
+        <div class="row">
+          <img src="img/wa.png" />
+          <div class="main-row">
+            <div class="row-text">
+              <h5>
+                Learning AWS in Class
+              </h5>
+            </div>
+            <div class="row-icon">
+            </div>
+          </div>
+          <h4>
+            Using AWS Media and simultaneously studying in class
+          </h4>
+        </div>
+
+        <div class="row">
+          <img src="img/cs.png" />
+          <div class="main-row">
+            <div class="row-text">
+              <h5>Operating Cisco Packet Tracer in tenth grade</h5>
+            </div>
+            <div class="row-icon">
+              </a>
+            </div>
+          </div>
+          <h4>
+            Practicing Cisco Packet Tracer before taking the Level Up Exam in tenth grade was very challenging, hehe
+          </h4>
+        </div>
+
+        <div class="row">
+          <img src="img/im.png" />
+          <div class="main-row">
+            <div class="row-text">
+              <h5>UI/UX Designer Training with Digiup</h5>
+            </div>
+            <div class="row-icon">
+            </div>
+          </div>
+          <h4>
+            UI/UX Designer training creates a free website before final training
+          </h4>
+        </div>
+
+        <div class="row">
+          <img src="img/q.png" />
+          <div class="main-row">
+            <div class="row-text">
+              <h5>Final ui-ux designer results at DIGIUP</h5>
+            </div>
+            <div class="row-icon">
+            </div>
+          </div>
+          <h4>
+            Final Project UI/UX Design creating a free website during final
+            training
+          </h4>
+        </div>
+
+        <div class="row">
+          <img src="img/p.png" />
+          <div class="main-row">
+            <div class="row-text">
+              <h5>First Time to learn a UI UX</h5>
+            </div>
+            <div class="row-icon">
+            </div>
+          </div>
+          <h4>
+            Project This is the first project to create UI UX in a subject
+          </h4>
+        </div>
+
+
+        <div class="row">
+          <img src="img/f.png" />
+          <div class="main-row">
+            <div class="row-text">
+              <h5>UI UX competition with 4 members held by YoungOnTop</h5>
+            </div>
+            <div class="row-icon">
+            </div>
+          </div>
+          <h4>
+            The competition was held by YoungTop and the four of us took part in
+            this competition
+          </h4>
+        </div>
+
+        <div class="row">
+          <img src="img/m.png" />
+          <div class="main-row">
+            <div class="row-text">
+              <h5>
+                Create Instagram feeds for the Ambient Council organization
+              </h5>
+            </div>
+            <div class="row-icon">
+            </div>
+          </div>
+          <h4>
+            Create an Instagram feed that is posted on a Scout Organization's
+            Instagram
+          </h4>
+        </div>
+
+        <div class="row">
+          <img src="img/pr.png" />
+          <div class="main-row">
+            <div class="row-text">
+              <h5>My personal page on Figma</h5>
+            </div>
+            <div class="row-icon">
+            </div>
+          </div>
+          <h4>
+            Projects that I often use when I have free time and do things I want
+            to make
+          </h4>
+        </div>
+
+        <div class="row">
+          <img src="img/s.png" />
+          <div class="main-row">
+            <div class="row-text">
+              <h5>Training with Jagoan Hosting</h5>
+            </div>
+            <div class="row-icon">
+            </div>
+          </div>
+          <h4>
+            We will create a website from
+            WordPress and start by creating a picture in Figma
+          </h4>
+        </div>
+
+        <div class="row">
+          <img src="img/yo.png" />
+          <div class="main-row">
+            <div class="row-text">
+              <h5>
+                Learn to create an inter-galactic chat application in Figma
+              </h5>
+            </div>
+            <div class="row-icon">
+            </div>
+          </div>
+          <h4>
+            My desire is to create an application, even though it is not
+            included in classroom learning
+          </h4>
+        </div>
+        
+        
       </div>
     </section>
 
-    <!-- Gallery Section -->
-    <section id="gallery" class="py-16 px-4">
-      <div class="container mx-auto text-center">
-        <h2 class="text-5xl font-bold mb-8 text-yellow-400">Gallery</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          <div
-            class="bg-gray-800 p-4 rounded-lg shadow-lg transform hover:scale-110 transition-transform duration-300"
-          >
-            <img
-              src="assets/gallery/Cisco.png"
-              alt="Project 1"
-              class="w-full h-64 object-cover rounded-lg mb-2"
-            />
-            <p class="text-lg mt-2 text-yellow-400">
-              Learning Cisco Packet Tracer at school the first time
-            </p>
-          </div>
-          <div
-            class="bg-gray-800 p-4 rounded-lg shadow-lg transform hover:scale-110 transition-transform duration-300"
-          >
-            <img
-              src="assets/gallery/IP.png"
-              alt="Project 2"
-              class="w-full h-64 object-cover rounded-lg mb-2"
-            />
-            <p class="text-lg mt-2 text-yellow-400">
-              Learning about IP Address with Cisco Packet Tracer
-            </p>
-          </div>
-          <div
-            class="bg-gray-800 p-4 rounded-lg shadow-lg transform hover:scale-110 transition-transform duration-300"
-          >
-            <img
-              src="assets/gallery/YoaiChat.png"
-              alt="Project 3"
-              class="w-full h-64 object-cover rounded-lg mb-2"
-            />
-            <p class="text-lg mt-2 text-yellow-400">
-              YoaiChat, UI UX App I built
-            </p>
-          </div>
+   <!-- My Certificates -->
+<section class="certificates" id="certificates">
+  <div class="center-text" data-aos="fade-down">
+    <h2>My <span>Certificates</span></h2>
+  </div>
 
-          <div
-            class="bg-gray-800 p-4 rounded-lg shadow-lg transform hover:scale-110 transition-transform duration-300"
-          >
-            <img
-              src="assets/gallery/Python.png"
-              alt="Project 3"
-              class="w-full h-64 object-cover rounded-lg mb-2"
-            />
-            <p class="text-lg mt-2 text-yellow-400">
-              Learn Python for the first time
-            </p>
-          </div>
+  <div class="certificates-content" data-aos="zoom-in-down">
+    <!-- Sertifikat 1 -->
 
-          <div
-            class="bg-gray-800 p-4 rounded-lg shadow-lg transform hover:scale-110 transition-transform duration-300"
-          >
-            <img
-              src="assets/gallery/wb.png"
-              alt="Project 3"
-              class="w-full h-64 object-cover rounded-lg mb-2"
-            />
-            <p class="text-lg mt-2 text-yellow-400">
-              The results of the Website Design Competition that we held at
-              STIKI Malang
-            </p>
-          </div>
-
-          <div
-            class="bg-gray-800 p-4 rounded-lg shadow-lg transform hover:scale-110 transition-transform duration-300"
-          >
-            <img
-              src="assets/gallery/XT1.png"
-              alt="Project 3"
-              class="w-full h-64 object-cover rounded-lg mb-2"
-            />
-            <p class="text-lg mt-2 text-yellow-400">
-              Website creation at the first time
-            </p>
-          </div>
-          <div
-            class="bg-gray-800 p-4 rounded-lg shadow-lg transform hover:scale-110 transition-transform duration-300"
-          >
-            <img
-              src="assets/gallery/php.png"
-              alt="Project 3"
-              class="w-full h-64 object-cover rounded-lg mb-2"
-            />
-            <p class="text-lg mt-2 text-yellow-400">
-              Making the first website with PHP programming language
-            </p>
-          </div>
-          <div
-            class="bg-gray-800 p-4 rounded-lg shadow-lg transform hover:scale-110 transition-transform duration-300"
-          >
-            <img
-              src="assets/gallery/sambung.png"
-              alt="Project 3"
-              class="w-full h-64 object-cover rounded-lg mb-2"
-            />
-            <p class="text-lg mt-2 text-yellow-400">
-              connection between Laptop to Laptop with Cisco
-            </p>
-          </div>
-          <div
-            class="bg-gray-800 p-4 rounded-lg shadow-lg transform hover:scale-110 transition-transform duration-300"
-          >
-            <img
-              src="assets/gallery/YukDahar.png"
-              alt="Project 3"
-              class="w-full h-64 object-cover rounded-lg mb-2"
-            />
-            <p class="text-lg mt-2 text-yellow-400">
-              Make a food App with friends
-            </p>
-          </div>
-
-          <div
-            class="bg-gray-800 p-4 rounded-lg shadow-lg transform hover:scale-110 transition-transform duration-300"
-          >
-            <img
-              src="assets/gallery/React.jpeg"
-              alt="Project 3"
-              class="w-full h-64 object-cover rounded-lg mb-2"
-            />
-            <p class="text-lg mt-2 text-yellow-400">
-              Using React.JS for the first time in website development
-            </p>
-          </div>
-
-          <div
-            class="bg-gray-800 p-4 rounded-lg shadow-lg transform hover:scale-110 transition-transform duration-300"
-          >
-            <img
-              src="assets/gallery/DigiUp.png"
-              alt="Project 3"
-              class="w-full h-64 object-cover rounded-lg mb-2"
-            />
-            <p class="text-lg mt-2 text-yellow-400">
-              Digiup UI UX Training
-            </p>
-          </div>
-
-          <div
-            class="bg-gray-800 p-4 rounded-lg shadow-lg transform hover:scale-110 transition-transform duration-300"
-          >
-            <img
-              src="assets/gallery/DU.png"
-              alt="Project 3"
-              class="w-full h-64 object-cover rounded-lg mb-2"
-            />
-            <p class="text-lg mt-2 text-yellow-400">
-              Digiup Graphic Designer Training
-            </p>
-          </div>
-          <div
-            class="bg-gray-800 p-4 rounded-lg shadow-lg transform hover:scale-110 transition-transform duration-300"
-          >
-            <img
-              src="assets/gallery/unira.png"
-              alt="Project 3"
-              class="w-full h-64 object-cover rounded-lg mb-2"
-            />
-            <p class="text-lg mt-2 text-yellow-400">
-              Results of the Library Web Design competition
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Organization Section -->
-    <section id="Organization" class="py-16 px-4 bg-gray-700">
-      <div class="container mx-auto text-center">
-        <h2 class="text-5xl font-bold mb-8 text-yellow-400">Organization</h2>
-        <div
-          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
-        >
-          <!-- Organization 1 -->
-          <div
-            class="bg-gray-800 p-4 rounded-lg shadow-lg transform hover:scale-110 transition-transform duration-300 flex flex-col items-center justify-center"
-          >
-            <img
-              src="assets/Organization/bdi.JPG"
-              alt="Organization 1"
-              class="w-full h-48 object-cover rounded-lg mb-2 border-4 border-yellow-400 shadow-2xl"
-            />
-            <p class="text-lg text-yellow-400 text-center">
-              BDI (Badan Dakwah Islam): In charge of recording children who
-              participate in activities
-            </p>
-          </div>
-
-          <!-- Organization 2 -->
-          <div
-            class="bg-gray-800 p-4 rounded-lg shadow-lg transform hover:scale-110 transition-transform duration-300 flex flex-col items-center justify-center"
-          >
-            <img
-              src="assets/Organization/memo.png"
-              alt="Organization 2"
-              class="w-full h-48 object-cover rounded-lg mb-2 border-4 border-yellow-400 shadow-2xl"
-            />
-            <p class="text-lg text-yellow-400 text-center">
-              MeMO (Media Moklet): In charge of designing both Flyers and other
-              things
-            </p>
-          </div>
-
-          <!-- Organization 3 -->
-          <div
-            class="bg-gray-800 p-4 rounded-lg shadow-lg transform hover:scale-110 transition-transform duration-300 flex flex-col items-center justify-center"
-          >
-            <img
-              src="assets/Organization/dewan.png"
-              alt="Organization 3"
-              class="w-full h-48 object-cover rounded-lg mb-2 border-4 border-yellow-400 shadow-2xl"
-            />
-            <p class="text-lg text-yellow-400 text-center">
-              Ambalan Council: In charge of evaluating activities
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Certificate Section -->
-    <section id="Certificate" class="py-16 px-4 bg-gray-800">
-      <div class="container mx-auto text-center">
-        <h2 class="text-5xl font-bold mb-8 text-yellow-400">Certificates</h2>
-        <div
-          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
-        >
-          <!-- Replace the placeholder src with your certificate images -->
-          <div
-            class="bg-gray-700 p-4 rounded-lg shadow-lg transform hover:scale-110 transition-transform duration-300"
-          >
-            <img
-              src="assets/Certificate/BS.png"
-              alt="Certificate 2"
-              class="w-full h-48 object-cover rounded-lg mb-2 border-4 border-yellow-400 shadow-2xl"
-            />
-            <p class="text-lg text-yellow-400">
-              Results of the Top 10 Business Plan Competition held by Young On
-              Top
-            </p>
-          </div>
-          <div
-            class="bg-gray-700 p-4 rounded-lg shadow-lg transform hover:scale-110 transition-transform duration-300"
-          >
-            <img
-              src="assets/Certificate/Database.png"
-              alt="Certificate 1"
-              class="w-full h-48 object-cover rounded-lg mb-2 border-4 border-yellow-400 shadow-2xl"
-            />
-            <p class="text-lg text-yellow-400">Databases Specialist</p>
-          </div>
-          <div
-            class="bg-gray-700 p-4 rounded-lg shadow-lg transform hover:scale-110 transition-transform duration-300"
-          >
-            <img
-              src="assets/Certificate/Data Science (1).png"
-              alt="Certificate 2"
-              class="w-full h-48 object-cover rounded-lg mb-2 border-4 border-yellow-400 shadow-2xl"
-            />
-            <p class="text-lg text-yellow-400">
-              Introduction to Data Science With R
-            </p>
-          </div>
-          <div
-            class="bg-gray-700 p-4 rounded-lg shadow-lg transform hover:scale-110 transition-transform duration-300"
-          >
-            <img
-              src="assets/Certificate/Learn R.png"
-              alt="Certificate 2"
-              class="w-full h-48 object-cover rounded-lg mb-2 border-4 border-yellow-400 shadow-2xl"
-            />
-            <p class="text-lg text-yellow-400">
-              Guide to learn R with DQLAB
-            </p>
-          </div>
-          <div
-            class="bg-gray-700 p-4 rounded-lg shadow-lg transform hover:scale-110 transition-transform duration-300"
-          >
-            <img
-              src="assets/Certificate/Agama.png"
-              alt="Certificate 2"
-              class="w-full h-48 object-cover rounded-lg mb-2 border-4 border-yellow-400 shadow-2xl"
-            />
-            <p class="text-lg text-yellow-400">
-              Silver medal in religion competition
-            </p>
-          </div>
-          <div
-            class="bg-gray-700 p-4 rounded-lg shadow-lg transform hover:scale-110 transition-transform duration-300"
-          >
-            <img
-              src="assets/Certificate/Jagoan Hosting.png"
-              alt="Certificate 2"
-              class="w-full h-48 object-cover rounded-lg mb-2 border-4 border-yellow-400 shadow-2xl"
-            />
-            <p class="text-lg text-yellow-400">
-              Wordpress Training Certificate with Jagoan Hosting
-            </p>
-          </div>
-          <div
-            class="bg-gray-700 p-4 rounded-lg shadow-lg transform hover:scale-110 transition-transform duration-300"
-          >
-            <img
-              src="assets/Certificate/Digital Mapping.png"
-              alt="Certificate 2"
-              class="w-full h-48 object-cover rounded-lg mb-2 border-4 border-yellow-400 shadow-2xl"
-            />
-            <p class="text-lg text-yellow-400">
-              Digital Mapping
-            </p>
-          </div>
-          <div
-            class="bg-gray-700 p-4 rounded-lg shadow-lg transform hover:scale-110 transition-transform duration-300"
-          >
-            <img
-              src="assets/Certificate/Graphic Designer.png"
-              alt="Certificate 2"
-              class="w-full h-48 object-cover rounded-lg mb-2 border-4 border-yellow-400 shadow-2xl"
-            />
-            <p class="text-lg text-yellow-400">
-              Graphic Designer Training with Digiup
-            </p>
-          </div>
-          <div
-            class="bg-gray-700 p-4 rounded-lg shadow-lg transform hover:scale-110 transition-transform duration-300"
-          >
-            <img
-              src="assets/Certificate/UI UX.png"
-              alt="Certificate 2"
-              class="w-full h-48 object-cover rounded-lg mb-2 border-4 border-yellow-400 shadow-2xl"
-            />
-            <p class="text-lg text-yellow-400">
-              UI/UX Training with Digiup
-            </p>
-          </div>
-          <div
-            class="bg-gray-700 p-4 rounded-lg shadow-lg transform hover:scale-110 transition-transform duration-300"
-          >
-            <img
-              src="assets/Certificate/MLBB.png"
-              alt="Certificate 2"
-              class="w-full h-48 object-cover rounded-lg mb-2 border-4 border-yellow-400 shadow-2xl"
-            />
-            <p class="text-lg text-yellow-400">
-              MLBB Competition
-            </p>
-          </div>
-          <div
-            class="bg-gray-700 p-4 rounded-lg shadow-lg transform hover:scale-110 transition-transform duration-300"
-          >
-            <img
-              src="assets/Certificate/Penulis.jpg"
-              alt="Certificate 2"
-              class="w-full h-48 object-cover rounded-lg mb-2 border-4 border-yellow-400 shadow-2xl"
-            />
-            <p class="text-lg text-yellow-400">
-              Certificate of Authorship from “TeoriKata”
-            </p>
-          </div>
-          <div
-            class="bg-gray-700 p-4 rounded-lg shadow-lg transform hover:scale-110 transition-transform duration-300"
-          >
-            <img
-              src="assets/Certificate/rab.png"
-              alt="Certificate 2"
-              class="w-full h-48 object-cover rounded-lg mb-2 border-4 border-yellow-400 shadow-2xl"
-            />
-            <p class="text-lg text-yellow-400">
-              Arabic Language Competition
-            </p>
-          </div>
-          <div
-            class="bg-gray-700 p-4 rounded-lg shadow-lg transform hover:scale-110 transition-transform duration-300"
-          >
-            <img
-              src="assets/Certificate/Web Designn.png"
-              alt="Certificate 2"
-              class="w-full h-48 object-cover rounded-lg mb-2 border-4 border-yellow-400 shadow-2xl"
-            />
-            <p class="text-lg text-yellow-400">
-              Website Design Competition at a competition
-            </p>
-          </div>
-          <div
-            class="bg-gray-700 p-4 rounded-lg shadow-lg transform hover:scale-110 transition-transform duration-300"
-          >
-            <img
-              src="assets/Certificate/ui.png"
-              alt="Certificate 2"
-              class="w-full h-48 object-cover rounded-lg mb-2 border-4 border-yellow-400 shadow-2xl"
-            />
-            <p class="text-lg text-yellow-400">
-              UI UX Training
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Thank You Section -->
-<section id="thank-you" class="py-16 px-4 bg-gray-900 relative overflow-hidden">
-  <div class="container mx-auto text-center">
-    <h2 class="text-5xl font-bold mb-8 text-yellow-400 animate__animated animate__fadeInDown">
-      Thank You!
-    </h2>
-    <p class="text-lg text-gray-300 mb-4 animate__animated animate__fadeInUp delay-1s">
-      Your support means the world to me. Keep shining and chasing your dreams!
-    </p>
-    <blockquote class="text-xl italic text-gray-400 animate__animated animate__fadeInUp delay-2s">
-      "The only way to do great work is to love what you do." - Steve Jobs
-    </blockquote>
-    
-    <!-- Glitter effect -->
-    <div class="relative mt-8">
-      <div class="star-container">
-        <!-- Increase the number of stars and make them larger -->
-        <div class="star animate-pulse animate__animated animate__fadeIn delay-3s"></div>
-        <div class="star animate-pulse animate__animated animate__fadeIn delay-3s" style="left: 10%;"></div>
-        <div class="star animate-pulse animate__animated animate__fadeIn delay-3s" style="left: 30%;"></div>
-        <div class="star animate-pulse animate__animated animate__fadeIn delay-3s" style="left: 50%;"></div>
-        <div class="star animate-pulse animate__animated animate__fadeIn delay-3s" style="left: 70%;"></div>
-        <div class="star animate-pulse animate__animated animate__fadeIn delay-3s" style="left: 90%;"></div>
-      </div>
+    <!-- Sertifikat 15 -->
+    <div class="certificate-item">
+      <a href="https://drive.google.com/file/d/18c3hJSrWbh42x-qWywkBYua3atqefUFA/view" target="_blank">
+        <img src="img/sr/cy.jpg" alt="Certificate 3" />
+        <p>Peserta Pelatihan Cyber Security</p>
+      </a>
     </div>
+
+    <!-- Sertifikat 15 -->
+    <div class="certificate-item">
+      <a href="https://drive.google.com/file/d/1KbE6yEDEddb5ql8einLtfqOfBDyvyoNP/view?usp=sharing" target="_blank">
+        <img src="img/sr/c1.png" alt="Certificate 3" />
+        <p>Certificate of Participation Workshop Digital Mapping</p>
+      </a>
+    </div>
+
+    <div class="certificate-item">
+      <a href="https://drive.google.com/file/d/1OjXabXSeEgcP52-hxQ0n5Mo-tXn_7aRl/view?usp=sharing" target="_blank">
+        <img src="img/sr/st1.png" alt="Certificate 3" />
+        <p>Finalis Lomba Stiki Bidang Desain Website</p>
+      </a>
+    </div>
+
+    <div class="certificate-item">
+      <a href="https://drive.google.com/drive/folders/1_0JXcx97Y-dbWwT-ZL2Tc0hEWFv78-0_" target="_blank">
+        <img src="img/sr/db.png" alt="Certificate 3" />
+        <p>Test Sertifikasi Internasional Database</p>
+      </a>
+    </div>
+
+    <!-- Sertifikat 15 -->
+    <div class="certificate-item">
+      <a href="https://drive.google.com/file/d/1xvW5sLm5rHNhVbUIaNzPzTQIJ-bFvVtu/view" target="_blank">
+        <img src="img/sr/st.png" alt="Certificate 3" />
+        <p>Roadshow Gerakan Nasional 1000 Startup Digital X SMK Telkom
+          Malang</p>
+      </a>
+    </div>
+
+    <div class="certificate-item">
+      <a href="https://drive.google.com/drive/u/0/folders/1Vp2Wtr1Hl3Sirk1PnICpkV-b49rhth57" target="_blank">
+        <img src="img/sr/12.png" alt="Certificate 3" />
+        <p>Sertifikat BPTC UPH 2024</p>
+      </a>
+    </div>
+
+    <!-- Sertifikat 16 -->
+    <div class="certificate-item">
+      <a href="https://drive.google.com/file/d/1ceEug9gqju20xStcrIauRpXmMGAKEhJi/view" target="_blank">
+        <img src="img/sr/ts.png" alt="Certificate 3" />
+        <p>Pengabdian Pada Masyarakat dan IoT</p>
+      </a>
+    </div>
+
+    <!-- Sertifikat 17 -->
+    <div class="certificate-item">
+      <a href="https://drive.google.com/file/d/1y4J-dgtBrj80C_36kHYDwtOkMMCIMveN/view" target="_blank">
+        <img src="img/sr/dg.png" alt="Certificate 3" />
+        <p>Graphic Designer DigiUp</p>
+      </a>
+    </div>
+
+    <!-- Sertifikat 18 -->
+    <div class="certificate-item">
+      <a href="https://drive.google.com/file/d/1TmS0w80aS3DD69VAUWO-Y-BRoxEozD_Z/view" target="_blank">
+        <img src="img/sr/ui.png" alt="Certificate 3" />
+        <p>UI/UX Designer DigiUp</p>
+      </a>
+    </div>
+
+    <!-- Sertifikat 19 -->
+    <div class="certificate-item">
+      <a href="https://drive.google.com/file/d/13PQqLKOtXD8FDcpGc7WQnVbSU5HYVZoW/view" target="_blank">
+        <img src="img/sr/dgp.png" alt="Certificate 3" />
+        <p>Sertifikat Kunjungan Ke Inagata</p>
+      </a>
+    </div>
+
+    <!-- Sertifikat 19 -->
+    <div class="certificate-item">
+      <a href="https://drive.google.com/file/d/1dZy1qGj4UAnypHddJFOYNVwMpNQH27U4/view" target="_blank">
+        <img src="img/sr/jg.png" alt="Certificate 3" />
+        <p>Sertifikat Jagoan Hosting</p>
+      </a>
+    </div>
+
+    <!-- Sertifikat 19 -->
+    <div class="certificate-item">
+      <a href="https://drive.google.com/drive/u/0/folders/1M2BljYSrSvB91WsElYS6Chq1D_FZk-LR" target="_blank">
+        <img src="img/sr/sfl.png" alt="Certificate 3" />
+        <p>Partisipasi Acara Sejuta Cita</p>
+      </a>
+    </div>
+
+    <div class="certificate-item">
+      <a href="https://drive.google.com/file/d/15sdeWfSmOtFVHmF4--pv0hQEXrDF78H6/view" target="_blank">
+        <img src="img/sr/op.png" alt="Certificate 1" />
+        <p>Lomba Opini</p>
+      </a>
+    </div>
+
+    <div class="certificate-item">
+      <a href="https://drive.google.com/file/d/12Kv9Avy2UXqIn_UQrlX6BoMZ9rp3Hljk/view" target="_blank">
+        <img src="img/sr/Osn.png" alt="Certificate 1" />
+        <p>Piagam Penghargaan Biologi OSN</p>
+      </a>
+    </div>
+
+    <!-- Sertifikat 2 -->
+    <div class="certificate-item">
+      <a href="https://drive.google.com/file/d/1sxXrgG8RX-dWl98hzlzZqI_UhkXMoIvF/view" target="_blank">
+        <img src="img/sr/Agama.png" alt="Certificate 2" />
+        <p>Sertifikat Pendidikan Agama Islam</p>
+      </a>
+    </div>
+
+    <!-- Sertifikat 3 -->
+    <div class="certificate-item">
+      <a href="https://drive.google.com/file/d/1IbMqTTwR8ndy7-xt4-lXAIqndeAGOWsu/view" target="_blank">
+        <img src="img/sr/dq1.png" alt="Certificate 3" />
+        <p>Guide to Learn R with AI at DQLab</p>
+      </a>
+    </div>
+
+     <!-- Sertifikat 5 -->
+     <div class="certificate-item">
+      <a href="https://drive.google.com/file/d/12mXyA8_gYTKVMummQpjRrcDZO1dyDyAk/view" target="_blank">
+        <img src="img/sr/dq2.png" alt="Certificate 3" />
+        <p>Introduction to Data Science with R</p>
+      </a>
+    </div>
+
+     <!-- Sertifikat 5 -->
+     <div class="certificate-item">
+      <a href="https://drive.google.com/file/d/109RRPfaZO9LDepS1cxxvQ0K7yqFGhht6/view" target="_blank">
+        <img src="img/sr/ps.png" alt="Certificate 3" />
+        <p>Esai Nasional Jurusan_Prodi Rekayasa Tekstil UII</p>
+      </a>
+    </div>
+
+    <!-- Sertifikat 6 -->
+    <div class="certificate-item">
+      <a href="https://drive.google.com/file/d/1sqoD6XneZjoFv9shx13gfnJ5lgBdUs5Y/view" target="_blank">
+        <img src="img/sr/pr.png" alt="Certificate 3" />
+        <p>Medali Perunggu Nasional Bahasa Arab</p>
+      </a>
+    </div>
+
+    <!-- Sertifikat 7 -->
+    <div class="certificate-item">
+      <a href="https://drive.google.com/file/d/1LA99yry-UXOSvPc8GSK8uVw9I_4jtTw0/view" target="_blank">
+        <img src="img/sr/p1.png" alt="Certificate 3" />
+        <p>Medali Perak Sejarah</p>
+      </a>
+    </div>
+
+    <!-- Sertifikat 8 -->
+    <div class="certificate-item">
+      <a href="https://drive.google.com/file/d/1hcuO1-X-wU24mvm3lv6aheexQnj-5Tjg/view?usp=sharing" target="_blank">
+        <img src="img/sr/Nls.jpg" alt="Certificate 3" />
+        <p>Penulis Event Gelis Puisi</p>
+      </a>
+    </div>
+
+    <!-- Sertifikat 9 -->
+    <div class="certificate-item">
+      <a href="https://drive.google.com/file/d/1XFMbQ0cCi5ruXL15x3fVY9n2xmp6F_C9/view" target="_blank">
+        <img src="img/sr/ub.png" alt="Certificate 3" />
+        <p>Acara Seputar Kajian Kebanksentralan</p>
+      </a>
+    </div>
+
+    <!-- Sertifikat 10 -->
+    <div class="certificate-item">
+      <a href="https://drive.google.com/file/d/1KkFU8sDC6wt_eUYpC1JmeISJ_cGmPgKM/view" target="_blank">
+        <img src="img/sr/um.png" alt="Certificate 3" />
+        <p>Transformasi Digital UMKM</p>
+      </a>
+    </div>
+
+    <!-- Sertifikat 11 -->
+    <div class="certificate-item">
+      <a href="https://drive.google.com/file/d/1-D4WrX_IPlkfw1o2K9_fxOYFjte91t8L/view" target="_blank">
+        <img src="img/sr/ar.png" alt="Certificate 3" />
+        <p>Peserta Bahasa Arab</p>
+      </a>
+    </div>
+
+    <!-- Sertifikat 12 -->
+    <div class="certificate-item">
+      <a href="https://drive.google.com/drive/u/0/folders/1e0lIAAIeN24HjG-V1_fwqsl4W8yI-lki" target="_blank">
+        <img src="img/sr/ml.png" alt="Certificate 3" />
+        <p>Salah Satu Sertifikat E-sport</p>
+      </a>
+    </div>
+
+    <!-- Sertifikat 13 -->
+    <div class="certificate-item">
+      <a href="https://drive.google.com/file/d/19sbpttLpfthC1lZ-j668vFHPCe6TZ8FJ/view" target="_blank">
+        <img src="img/sr/pi.png" alt="Certificate 3" />
+        <p>Olimpiade Pelajar Tingkat Nasional</p>
+      </a>
+    </div>
+
+    <!-- Sertifikat 14 -->
+    <div class="certificate-item">
+      <a href="https://drive.google.com/drive/u/0/folders/1K2aJHuE4SY5lJNeAGzAB0duSMiZdIpXP" target="_blank">
+        <img src="img/sr/is.png" alt="Certificate 3" />
+        <p>Olimpiade Pendidikan Agama Islam</p>
+      </a>
+    </div>
+
+     <!-- Sertifikat 19 -->
+     <div class="certificate-item">
+      <a href="https://drive.google.com/file/d/1FzFEzHbllP3zKtwxsYv7YZwdJCEsAkG9/view" target="_blank">
+        <img src="img/sr/sj.png" alt="Certificate 3" />
+        <p>Lomba Sejarah Kebudayaan Islam</p>
+      </a>
+    </div>
+    
   </div>
 </section>
 
-<!-- Add Animate.css -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  
+</section>
 
 
+    <!--contact-->
+    <<section class="contact" id="contact">
+      <div class="center-text" data-aos="fade-down">
+        <h2>Contact <span>Me</span></h2>
+        <h4>Masih dalam perbaikan</h4>
+      </div>
+    
+      <div class="contact-form" data-aos="zoom-in-down">
+        <form action="contact.php" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea name="message" placeholder="Your Message" required></textarea>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+    </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 py-4 text-center">
-      <p class="text-gray-500">
-        &copy; 2024 Aliif Portofolio. All rights reserved.
-      </p>
-    </footer>
+    <div class="footer">
+      <div class="copyright">
+        <p>2024 Moh. Aliiffil Qodri, All Right Reserved</p>
+      </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+      <a href="#home" class="scroll-top">
+        <i class="ri-arrow-up-s-fill"></i>
+      </a>
+    </div>
+
+    <!-- js link-->
+    <script src="js/script.js"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var options = {
-          strings: ["Welcome to My Portofolio", "Explore My Work"],
-          typeSpeed: 150,
-          backSpeed: 20,
-          backDelay: 1000,
-          loop: true,
-        };
-        var typed = new Typed("#typing-text", options);
+      AOS.init({
+        offset: 300,
+        duration: 1400,
       });
     </script>
   </body>
